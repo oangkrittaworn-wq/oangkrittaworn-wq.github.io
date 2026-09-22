@@ -1,80 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>K9 Creative Activation</title>
-<meta name="description" content="K9 Creative Activation. Ideas that become experiences.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knine | Creative Activation</title>
+  <meta name="description" content="Knine Creative Activation. Ideas that become experiences.">
+  <link rel="icon" href="assets/k9-logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="cursor"></div>
-<header class="nav">
-  <a class="brand" href="#home" aria-label="K9 Creative Activation"><img src="assets/k9-logo.png" alt="Knine creative activation logo"></a>
-  <nav>
-    <a href="#work">WORK</a><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
-  </nav>
-  <a class="nav-cta" href="#contact">LET'S TALK <span>↗</span></a>
-</header>
+  <div class="progress"><span id="progressBar"></span></div>
+  <header class="topbar">
+    <a class="brand" href="#page-01" aria-label="Knine home">
+      <img src="assets/k9-logo.png" alt="Knine creative activation">
+    </a>
+    <div class="top-meta">
+      <span>K9 / CREATIVE ACTIVATION</span>
+      <button id="gridBtn" class="ghost-btn" type="button">INDEX</button>
+    </div>
+  </header>
 
-<main>
-<section id="home" class="hero">
-  <div class="hero-media"></div><div class="hero-vignette"></div>
-  <div class="hero-content">
-    <p class="eyebrow">K9 / CREATIVE ACTIVATION</p>
-    <h1>CREATIVE<br><em>ACTIVATION</em></h1>
-    <p class="hero-lead">IDEAS THAT BECOME<br>EXPERIENCES.</p>
-    <p class="hero-copy">A creative experience studio turning ideas into real-world impact through events, activation, brand experiences and content production.</p>
-    <a class="circle-link" href="#work"><span>VIEW<br>WORK</span><b>↓</b></a>
-  </div>
-  <div class="scroll-note">SCROLL <span>↓</span></div>
-</section>
+  <main>
+    <section class="intro" id="page-01">
+      <div class="intro-image"><img src="assets/slides/01.jpg" alt="Knine cover"></div>
+      <div class="intro-copy">
+        <p class="eyebrow">K9 / COMPANY PROFILE</p>
+        <h1>IDEAS<br><em>THAT BECOME</em><br>EXPERIENCES.</h1>
+        <p>Creative activation, events, experiences, campaigns and production. Scroll to explore the work in the exact sequence provided.</p>
+        <a class="scroll-link" href="#page-02">EXPLORE <span>↓</span></a>
+      </div>
+    </section>
 
-<section class="statement reveal">
-  <p class="eyebrow">THE K9 APPROACH</p>
-  <h2>WE CREATE ACROSS<br><span>BRANDS · PEOPLE · SPACES · CULTURE</span></h2>
-  <p>More than events. We create meaningful connections.</p>
-</section>
+    <section class="index-panel" id="indexPanel" aria-hidden="true">
+      <div class="index-head">
+        <p class="eyebrow">K9 / INDEX</p>
+        <button id="closeIndex" class="close-btn" type="button">CLOSE ×</button>
+      </div>
+      <div class="index-grid" id="indexGrid"></div>
+    </section>
 
-<section id="work" class="work section">
-  <div class="section-head"><div><p class="eyebrow">SELECTED WORKS</p><h2>THE WORK<br><em>WE MAKE</em></h2></div><a href="#contact" class="text-link">START A PROJECT ↗</a></div>
-  <div class="work-grid">
-    <article class="project project-lg reveal"><img src="assets/kamu.jpg"><div class="project-overlay"><p>01 / ACTIVATION</p><h3>KAMU 15th<br>ANNIVERSARY</h3><span>Station of Happiness ↗</span></div></article>
-    <article class="project reveal"><img src="assets/owndays.jpg"><div class="project-overlay"><p>02 / CAMPAIGN</p><h3>OWNDAYS<br>COLOR YOUR DAYS</h3><span>Campaign Activation ↗</span></div></article>
-    <article class="project reveal"><img src="assets/true.jpg"><div class="project-overlay"><p>03 / EXPERIENCE</p><h3>TRUE<br>ALPHA HUB</h3><span>Retail Experience ↗</span></div></article>
-    <article class="project reveal"><img src="assets/aion.jpg"><div class="project-overlay"><p>04 / B2C EXPERIENCE</p><h3>GAC / AION<br>@ CTW</h3><span>Experience Campaign ↗</span></div></article>
-    <article class="project reveal"><img src="assets/galderma.jpg"><div class="project-overlay"><p>05 / ACTIVATION</p><h3>GALDERMA<br>CENTRALWORLD</h3><span>Brand Experience ↗</span></div></article>
-    <article class="project reveal"><img src="assets/motorshow.jpg"><div class="project-overlay"><p>06 / EXHIBITION</p><h3>AUTOMOTIVE<br>MOTOR SHOW</h3><span>Show & Roadshow ↗</span></div></article>
-    <article class="project reveal"><img src="assets/iconsiam.jpg"><div class="project-overlay"><p>07 / CREATIVE EVENT</p><h3>ICONSIAM<br>CELEBRATIONS</h3><span>Event & Experience ↗</span></div></article>
-    <article class="project reveal"><img src="assets/experience.jpg"><div class="project-overlay"><p>08 / EXPERIENCE</p><h3>CREATIVE<br>EXPERIENCES</h3><span>From concept to completion ↗</span></div></article>
-  </div>
-</section>
+    <div id="slides"></div>
+  </main>
 
-<section id="services" class="services section reveal">
-  <div class="services-intro"><p class="eyebrow">WHAT WE DO</p><h2>IDEAS<br>INTO<br><em>IMPACT.</em></h2><p>From creative strategy to real-world execution, K9 builds brand experiences that move people and drive results.</p></div>
-  <div class="service-list">
-    <div><span>01</span><h3>CREATIVE PLAN</h3></div><div><span>02</span><h3>BRANDING</h3></div><div><span>03</span><h3>ACTIVATION</h3></div><div><span>04</span><h3>EXPERIENCE</h3></div><div><span>05</span><h3>EVENT</h3></div><div><span>06</span><h3>EXHIBITION</h3></div><div><span>07</span><h3>CAMPAIGN</h3></div><div><span>08</span><h3>PRODUCTION</h3></div><div><span>09</span><h3>ONLINE / TVC</h3></div>
-  </div>
-</section>
+  <footer>
+    <div><img src="assets/k9-logo.png" alt="Knine"><span>CREATIVE ACTIVATION</span></div>
+    <a href="#page-01">BACK TO TOP ↑</a>
+  </footer>
 
-<section class="client-band reveal"><p class="eyebrow">TRUSTED BY</p><div class="clients"><span>AP</span><span>Q HOUSE</span><span>BUILT LAND</span><span>PRUKSA</span><span>ICONSIAM</span><span>centralwOrld</span><span>SIAM PARAGON</span><span>SAMSUNG</span><span>AIS</span><span>TRUE</span><span>TOYOTA</span><span>SUZUKI</span><span>ISUZU</span><span>HONDA</span><span>OWNDAYS</span><span>CETAPHIL</span><span>OR</span><span>BRIDGESTONE</span><span>CASIO</span><span>LEGO</span></div></section>
-
-<section id="about" class="about section reveal">
-  <div class="about-image"><div class="portrait-placeholder">K9</div></div>
-  <div class="about-copy"><p class="eyebrow">ABOUT K9</p><h2>PEOPLE.<br>IDEAS.<br><em>EXPERIENCES.</em></h2><p>K9 is a creative house built around communication activation, real experience and one-stop creative solutions. Led by Creative Director Krit Taworn with 16+ years of experience in communication activation.</p><a class="text-link" href="#contact">LET'S WORK TOGETHER ↗</a></div>
-</section>
-
-<section id="contact" class="contact reveal">
-  <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
-  <h2>LET'S CREATE<br><em>SOMETHING</em><br>MEMORABLE.</h2>
-  <a class="big-cta" href="mailto:hello@k9creative.example">START A PROJECT <span>↗</span></a>
-  <div class="contact-meta"><span>K9 CREATIVE ACTIVATION</span><span>EMAIL / PHONE / LINE</span></div>
-</section>
-</main>
-<footer><div class="footer-brand">K9</div><span>CREATIVE ACTIVATION</span><div class="footer-links"><a href="#">FACEBOOK</a><a href="#">INSTAGRAM</a><a href="#contact">EMAIL</a></div></footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
