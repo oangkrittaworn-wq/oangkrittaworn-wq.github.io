@@ -1,52 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Knine | Creative Activation</title>
-  <meta name="description" content="Knine Creative Activation. Ideas that become experiences.">
-  <link rel="icon" href="assets/k9-logo.png">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knine | Creative Activation</title>
+<meta name="description" content="Knine Creative Activation">
+<link rel="icon" href="assets/k9-logo.png">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="progress"><span id="progressBar"></span></div>
-  <header class="topbar">
-    <a class="brand" href="#page-01" aria-label="Knine home">
-      <img src="assets/k9-logo.png" alt="Knine creative activation">
-    </a>
-    <div class="top-meta">
-      <span>K9 / CREATIVE ACTIVATION</span>
-      <button id="gridBtn" class="ghost-btn" type="button">INDEX</button>
+<div class="noise"></div>
+<div class="progress"><span id="progressBar"></span></div>
+
+<header class="nav">
+  <a class="logo" href="#home"><img src="assets/k9-logo.png" alt="Knine"></a>
+  <div class="nav-center">CREATIVE ACTIVATION <span>•</span> COMPANY PROFILE</div>
+  <button id="menuBtn" class="menu" type="button"><span></span><span></span><b>INDEX</b></button>
+</header>
+
+<aside id="indexPanel" class="index-panel" aria-hidden="true">
+  <div class="index-top">
+    <div><small>K9 / 2026</small><h2>SELECT A CHAPTER</h2></div>
+    <button id="closeBtn" class="close">CLOSE</button>
+  </div>
+  <div id="indexGrid" class="index-grid"></div>
+</aside>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-orb"></div>
+    <div class="hero-content">
+      <p class="kicker">K9 / CREATIVE ACTIVATION</p>
+      <h1>Ideas<br><i>into</i><br>Experience.</h1>
+      <p class="hero-copy">Creative thinking, physical experience and production craft, brought together as one activation house.</p>
+      <a href="#page-02" class="enter">ENTER PROFILE <span>↓</span></a>
     </div>
-  </header>
+    <div class="hero-art"><img src="assets/slides/01.jpg" alt="Knine company profile cover"></div>
+    <div class="hero-meta"><span>01 / 31</span><span>BANGKOK · THAILAND</span></div>
+  </section>
 
-  <main>
-    <section class="intro" id="page-01">
-      <div class="intro-image"><img src="assets/slides/01.jpg" alt="Knine cover"></div>
-      <div class="intro-copy">
-        <p class="eyebrow">K9 / COMPANY PROFILE</p>
-        <h1>IDEAS<br><em>THAT BECOME</em><br>EXPERIENCES.</h1>
-        <p>Creative activation, events, experiences, campaigns and production. Scroll to explore the work in the exact sequence provided.</p>
-        <a class="scroll-link" href="#page-02">EXPLORE <span>↓</span></a>
-      </div>
-    </section>
+  <div id="slides"></div>
+</main>
 
-    <section class="index-panel" id="indexPanel" aria-hidden="true">
-      <div class="index-head">
-        <p class="eyebrow">K9 / INDEX</p>
-        <button id="closeIndex" class="close-btn" type="button">CLOSE ×</button>
-      </div>
-      <div class="index-grid" id="indexGrid"></div>
-    </section>
+<div class="side-counter"><span id="current">01</span><i></i><span>31</span></div>
 
-    <div id="slides"></div>
-  </main>
+<footer>
+  <img src="assets/k9-logo.png" alt="Knine">
+  <span>CREATIVE ACTIVATION</span>
+  <a href="#home">BACK TO TOP ↑</a>
+</footer>
 
-  <footer>
-    <div><img src="assets/k9-logo.png" alt="Knine"><span>CREATIVE ACTIVATION</span></div>
-    <a href="#page-01">BACK TO TOP ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
