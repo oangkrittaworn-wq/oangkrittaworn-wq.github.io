@@ -1,4 +1,19 @@
-const projects=[['KAMU','15TH ANNIVERSARY','ACTIVATION',11],['OWNDAYS','COLOR YOUR DAYS','EXPERIENCE',13],['TRUE','ALPHA HUB','BRAND EXPERIENCE',21],['GAC / AION','UT','PRODUCT EXPERIENCE',23],['GWM','TANK 500','LAUNCH / EXPERIENCE',27],['XIAOMI','CREATIVE MUSIC MARKETING','CAMPAIGN',24],['CETAPHIL','BRAND EXPERIENCE','ACTIVATION',9],['OWNDAYS','GRAND POP-UP STORE','RETAIL EXPERIENCE',16]];
-const box=document.getElementById('projects');projects.forEach((x,i)=>{let e=document.createElement('article');e.className='project';e.innerHTML=`<img src="assets/slides/${String(x[3]).padStart(2,'0')}.jpg" alt="${x[0]} ${x[1]}" loading="lazy"><div class="project-meta"><span><b>${x[0]}</b> / ${x[1]}</span><em>0${i+1} / ${x[2]}</em></div>`;box.appendChild(e)});
-const ag=document.getElementById('archiveGrid');for(let i=1;i<=31;i++){let n=String(i).padStart(2,'0');let a=document.createElement('a');a.className='archive-item';a.href=`assets/slides/${n}.jpg`;a.target='_blank';a.innerHTML=`<img src="assets/slides/${n}.jpg" alt="K9 profile page ${n}" loading="lazy"><label>PAGE ${n}</label>`;ag.appendChild(a)}
-document.getElementById('open').onclick=()=>document.getElementById('menu').classList.add('open');document.getElementById('close').onclick=()=>document.getElementById('menu').classList.remove('open');document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));addEventListener('load',()=>setTimeout(()=>document.querySelector('.loader').classList.add('done'),1100));
+const menu=document.getElementById("menu");
+document.getElementById("menuOpen").onclick=()=>menu.classList.add("open");
+document.getElementById("menuClose").onclick=()=>menu.classList.remove("open");
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>menu.classList.remove("open"));
+addEventListener("load",()=>setTimeout(()=>document.querySelector(".loader").classList.add("done"),1000));
+
+const archive=document.getElementById("archiveGrid");
+for(let i=1;i<=31;i++){
+  const n=String(i).padStart(2,"0");
+  const a=document.createElement("a");
+  a.href=`assets/slides/${n}.jpg`; a.target="_blank";
+  a.innerHTML=`<img src="assets/slides/${n}.jpg" alt="K9 company profile page ${n}" loading="lazy"><label>PAGE ${n}</label>`;
+  archive.appendChild(a);
+}
+
+const observer=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")})
+},{threshold:.12});
+document.querySelectorAll(".service-grid article,.work-grid article,.client-logos span,.archive-grid a").forEach(x=>observer.observe(x));
